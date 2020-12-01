@@ -9,8 +9,8 @@ cur.execute('DROP TABLE IF EXISTS bitcoin')     # if already run this table exis
 cur.execute('''
 CREATE TABLE "bitcoin"(
     "Public_Address_base58" TEXT,
-    "Satoshis" TEXT,
     "Block" TEXT,
+    "Satoshis" TEXT,
     "hexRIPEMD160" TEXT
 ) 
 ''')                # Create an SQL table
@@ -21,10 +21,10 @@ if len(fname) < 1 : fname = "bitcoinAddresses.csv"          # if you just press 
 with open(fname) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')        # ensure the , is your delimiter else change this
     for row in csv_reader:
-        print(row)              # this loops yur csv and prints to SQL
+        print(row)              # this loops your csv and prints to SQL
         Public_Address_base58=row[0]
-        Satoshis=int(row[1])
-        Block=int(row[2])
+        Block=int(row[1])
+        Satoshis=int(row[2])
         HexRIPEMD160=row[3]
-        cur.execute('''INSERT INTO bitcoin(Public_Address_base58,Satoshis,Block,HexRIPEMD160) VALUES(?,?,?,?)''',(Public_Address_base58,Satoshis,Block,HexRIPEMD160))
+        cur.execute('''INSERT INTO bitcoin(Public_Address_base58,Block,Satoshis,HexRIPEMD160) VALUES(?,?,?,?)''',(Public_Address_base58,Block,Satoshis,HexRIPEMD160))
         conn.commit()
