@@ -1,6 +1,6 @@
-# 32_million_used_bitcoin_addresses_Nov28th2020
+# 32_million_used_bitcoin_addresses are here converted from CSV to SQLite to make searching faster in python
 SQLite Bitcoin addresses for cross-reference
 
 
-Data originally from https://www.bitkeys.work/faq.php in CSV format (which is slow to lookup)
+Data originally from https://www.bitkeys.work/faq.php in CSV format (which is slow...)
 
