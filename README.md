@@ -1,4 +1,4 @@
-# 32_million_used_bitcoin_addresses are here converted from CSV to SQLite to make searching faster in python
+# 32 million bitcoin addresses are here converted from CSV to SQLite to make searching faster in python
 SQLite Bitcoin addresses for cross-reference
 
 
